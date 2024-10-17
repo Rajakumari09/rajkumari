@@ -1,0 +1,62 @@
+.about {
+    padding: 60px 0;
+    background-color: #f3f8d7; /* Light pink background */
+}
+ 
+.section-title {
+    margin-bottom: 40px;
+}
+ 
+.section-title h2 {
+    font-size: 36px;
+    color: #2c3e50;
+}
+ 
+.section-title p {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+ 
+.rating-bar {
+    margin-bottom: 15px;
+}
+ 
+.progress {
+    height: 20px;
+}
+ 
+.progress-bar {
+    transition: width 0.6s ease;
+}
+ 
+.skill {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 18px; /* Increased font size for better readability */
+}
+ 
+.val {
+    margin-left: 10px;
+    font-weight: normal;
+}
+ 
+.member {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color:#879b166c; /* Light skin tone for member boxes */
+    padding: 15px; /* Add some padding for better spacing */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+ 
+.member img {
+    border-radius: 50%;
+    width: 120px; /* Fixed width for consistency */
+    height: 120px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the image fits well within the circle */
+    margin-bottom: 15px;
+}
+ 
+.social a {
+    margin: 0 10px;
+}
+ 

@@ -1,0 +1,82 @@
+<section id="about" class="about text-center mt-5">
+    <div class="container">
+        <!-- Top Image -->
+        <img src="assets/food-delivery-2.jpg" alt="Medicines Deliveries" class="img-fluid mb-4" style="max-width: 55%; height: auto;">
+ 
+        <div class="section-title">
+            <h2>{{ title }}</h2>
+            <p><strong>{{ mission }}</strong></p>
+        </div>
+ 
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <h3>Our Ratings</h3>
+                <div class="skills-content">
+                    <div *ngFor="let rating of [ratings.fiveStar, ratings.fourStar, ratings.threeStar, ratings.twoStar, ratings.oneStar]; let i = index">
+                        <div class="rating-bar">
+                            <span class="skill">{{ 5 - i }} Star</span>
+                            <span class="val">{{ rating }}%</span>
+                            <div class="progress">
+                                <div class="progress-bar"
+                                     role="progressbar"
+                                     [style.width]="rating + '%'"
+                                     [ngClass]="getRatingClass(5 - i)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="col-lg-6 pt-4 pt-lg-0">
+                <h3>Our Status</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="count-box">
+                            <span data-toggle="counter-up">{{ stats.happyCustomers }}</span>
+                            <p><strong>Happy Customers</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="count-box">
+                            <span data-toggle="counter-up">{{ stats.items }}</span>
+                            <p><strong>Items Delivered</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="count-box">
+                            <span data-toggle="counter-up">{{ stats.supportHours }}</span>
+                            <p><strong>Hours of Support</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="count-box">
+                            <span data-toggle="counter-up">{{ stats.hardWorkers }}</span>
+                            <p><strong>Hard Workers</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="container mt-5">
+ 
+        <h3>Meet Our Team</h3>
+        <div class="row">
+            <div *ngFor="let member of teamMembers" class="col-lg-4 col-md-6">
+                <div class="member">
+                    <img [src]="member.image" class="img-fluid" alt="{{ member.name }}">
+                    <div class="member-info">
+                        <h4>{{ member.name }}</h4>
+                        <div class="social">
+                            <a [href]="member.twitter" target="_blank" *ngIf="member.twitter"><i class="fab fa-twitter"></i></a>
+                            <a [href]="member.github" target="_blank"><i class="fab fa-github"></i></a>
+                            <a [href]="member.linkedin" target="_blank" *ngIf="member.linkedin"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
